@@ -62,17 +62,18 @@ def confirmall():
                 confirmed.append(entry)
                 print("Confirmed!")
             elif accept.lower() == "n":
-                edit = input("Edit? (Y/n)>")
+                edit = input("Edit? (Y/n)> ")
                 if edit.upper() == "Y":
                     new_name = input("Name> ")
                     new_quote = input("Quote> ")
                     new_name_capt = input("Name (Capt)> ")
                     new_quote_capt = input("Quote (Capt)> ")
 
-                    entry['name'] = new_name
-                    entry['quote'] = new_quote
-                    entry['name_capt'] = new_name_capt
-                    entry['quote_capt'] = new_quote_capt
+                    new_entry = {}
+                    new_entry['name'] = new_name
+                    new_entry['quote'] = new_quote
+                    new_entry['name_capt'] = new_name_capt
+                    new_entry['quote_capt'] = new_quote_capt
 
                     print(format(entry))
                     sure = input("Sure? (Y/n)> ")
